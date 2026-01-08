@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Twikoo Development</title>
+  </head>
+  <body>
+    <div id="tcomment"></div>
+    <script type="module" src="/src/client/main.all.js"></script>
+    <script type="module">
+      import twikoo from "/src/client/main.all.js";
+
+      // 开发环境测试配置
+      // twikoo 的 default export 就是 init 函数
+      twikoo({
+        el: "#tcomment",
+        envId: "https://twikoojsorg.imaegoo.com", // 修改为你的测试环境
+        // 或使用 cloudbase 环境
+        // envId: 'your-env-id',
+        path: location.pathname,
+      });
+    </script>
+  </body>
+</html>

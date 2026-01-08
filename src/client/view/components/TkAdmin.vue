@@ -68,7 +68,7 @@ import TkAdminConfig from './TkAdminConfig.vue'
 import TkAdminImport from './TkAdminImport.vue'
 import TkAdminExport from './TkAdminExport.vue'
 import { logger, call, t } from '../../utils'
-import iconClose from '@fortawesome/fontawesome-free/svgs/solid/times.svg'
+import iconClose from '@fortawesome/fontawesome-free/svgs/solid/times.svg?raw'
 
 export default {
   components: {

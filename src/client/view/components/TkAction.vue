@@ -14,10 +14,10 @@
 </template>
 
 <script>
-import iconComment from '@fortawesome/fontawesome-free/svgs/regular/comment.svg'
-import iconCommentSolid from '@fortawesome/fontawesome-free/svgs/solid/comment.svg'
-import iconLike from '@fortawesome/fontawesome-free/svgs/regular/thumbs-up.svg'
-import iconLikeSolid from '@fortawesome/fontawesome-free/svgs/solid/thumbs-up.svg'
+import iconComment from '@fortawesome/fontawesome-free/svgs/regular/comment.svg?raw'
+import iconCommentSolid from '@fortawesome/fontawesome-free/svgs/solid/comment.svg?raw'
+import iconLike from '@fortawesome/fontawesome-free/svgs/regular/thumbs-up.svg?raw'
+import iconLikeSolid from '@fortawesome/fontawesome-free/svgs/solid/thumbs-up.svg?raw'
 
 export default {
   data () {

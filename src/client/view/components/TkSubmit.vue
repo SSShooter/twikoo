@@ -50,9 +50,9 @@
 </template>
 
 <script>
-import iconMarkdown from '@fortawesome/fontawesome-free/svgs/brands/markdown.svg'
-import iconEmotion from '@fortawesome/fontawesome-free/svgs/regular/laugh.svg'
-import iconImage from '@fortawesome/fontawesome-free/svgs/regular/image.svg'
+import iconMarkdown from '@fortawesome/fontawesome-free/svgs/brands/markdown.svg?raw'
+import iconEmotion from '@fortawesome/fontawesome-free/svgs/regular/laugh.svg?raw'
+import iconImage from '@fortawesome/fontawesome-free/svgs/regular/image.svg?raw'
 import Clickoutside from 'element-ui/src/utils/clickoutside'
 import TkAvatar from './TkAvatar.vue'
 import TkMetaInput from './TkMetaInput.vue'

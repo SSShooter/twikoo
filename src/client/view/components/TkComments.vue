@@ -35,8 +35,8 @@
 import { call, getUrl, t } from '../../utils'
 import TkSubmit from './TkSubmit.vue'
 import TkComment from './TkComment.vue'
-import iconSetting from '@fortawesome/fontawesome-free/svgs/solid/cog.svg'
-import iconRefresh from '@fortawesome/fontawesome-free/svgs/solid/sync.svg'
+import iconSetting from '@fortawesome/fontawesome-free/svgs/solid/cog.svg?raw'
+import iconRefresh from '@fortawesome/fontawesome-free/svgs/solid/sync.svg?raw'
 import Vue from 'vue'
 
 export default {
