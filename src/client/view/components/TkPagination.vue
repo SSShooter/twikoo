@@ -136,7 +136,7 @@ export default {
   cursor: pointer;
 }
 .tk-pagination-pager.__current {
-  background-color: #409eff;
+  background-color: rgb(var(--tk-primary-color-rgb));
   pointer-events: none;
 }
 .tk-pagination .el-input {

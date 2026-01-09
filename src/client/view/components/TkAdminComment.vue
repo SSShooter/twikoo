@@ -223,7 +223,7 @@ export default {
   -webkit-appearance: none;
 }
 .tk-admin-comment-filter-type:focus {
-  border-color: #409eff;
+  border-color: rgb(var(--tk-primary-color-rgb));
 }
 .tk-admin-comment-filter-type option {
   color: initial;

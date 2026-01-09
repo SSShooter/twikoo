@@ -34,6 +34,7 @@ export default {
 <style>
 .twikoo {
   position: relative;
+  --tk-primary-color-rgb: 64, 158, 255;
 }
 .twikoo svg {
   width: 100%;
@@ -79,7 +80,7 @@ export default {
 }
 .twikoo .el-input__inner:focus,
 .twikoo .el-textarea__inner:focus {
-  border-color: #409eff;
+  border-color: rgb(var(--tk-primary-color-rgb));
 }
 .twikoo .el-input-group__append,
 .twikoo .el-input-group__prepend {
@@ -96,16 +97,16 @@ export default {
 .twikoo .el-button:not(.el-button--primary):not(.el-button--text):active,
 .twikoo .el-button:not(.el-button--primary):not(.el-button--text):focus,
 .twikoo .el-button:not(.el-button--primary):not(.el-button--text):hover {
-  color: #409eff;
-  background-color: rgba(64,158,255,0.063);
-  border-color: rgba(64,158,255,0.50);
+  color: rgb(var(--tk-primary-color-rgb));
+  background-color: rgba(var(--tk-primary-color-rgb), 0.063);
+  border-color: rgba(var(--tk-primary-color-rgb), 0.50);
 }
 .twikoo .el-button--primary.is-disabled,
 .twikoo .el-button--primary.is-disabled:active,
 .twikoo .el-button--primary.is-disabled:focus,
 .twikoo .el-button--primary.is-disabled:hover {
   color: rgba(255,255,255,0.63);
-  background-color: rgba(64,158,255,0.50);
+  background-color: rgba(var(--tk-primary-color-rgb), 0.50);
   border-color: transparent;
 }
 .twikoo .el-loading-mask {

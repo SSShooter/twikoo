@@ -61,7 +61,7 @@ export default {
 }
 .tk-action-link {
   margin-left: 0.5rem;
-  color: #409eff;
+  color: rgb(var(--tk-primary-color-rgb));
   text-decoration: none;
   display: flex;
   align-items: center;
@@ -88,6 +88,6 @@ export default {
   height: 1em;
   width: 1em;
   line-height: 0;
-  color: #409eff;
+  color: rgb(var(--tk-primary-color-rgb));
 }
 </style>

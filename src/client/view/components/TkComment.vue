@@ -364,7 +364,7 @@ export default {
   font-size: .9em;
 }
 .tk-nick-link:hover {
-  color: #409eff;
+  color: rgb(var(--tk-primary-color-rgb));
 }
 .tk-actions {
   display: none;
@@ -412,10 +412,10 @@ export default {
   color: #e6a23c;
 }
 .tk-tag-blue {
-  background-color: rgba(64,158,255,0.13);
-  border: 1px solid rgba(64,158,255,0.50);
+  background-color: rgba(var(--tk-primary-color-rgb), 0.13);
+  border: 1px solid rgba(var(--tk-primary-color-rgb), 0.50);
   border-radius: 2px;
-  color: #409eff;
+  color: rgb(var(--tk-primary-color-rgb));
 }
 .tk-tag-red {
   background-color: rgba(245,108,108,0.13);

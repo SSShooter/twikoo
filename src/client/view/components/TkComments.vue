@@ -159,7 +159,7 @@ export default {
   width: 0.75em;
   line-height: 0;
   cursor: pointer;
-  color: #409eff;
+  color: rgb(var(--tk-primary-color-rgb));
 }
 .twikoo div.code-toolbar {
   position: relative;
