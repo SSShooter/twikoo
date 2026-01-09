@@ -15,15 +15,19 @@
     </select>
     <div class="tk-admin-import-label">{{ t('ADMIN_IMPORT_SELECT_FILE') }}</div>
     <input type="file" value="" ref="inputFile" />
-    <el-button size="small" @click="uploadFile" :disabled="loading">{{ t('ADMIN_IMPORT_START') }}</el-button>
+    <tk-button size="small" @click="uploadFile" :disabled="loading">{{ t('ADMIN_IMPORT_START') }}</tk-button>
     <el-input type="textarea" :rows="10" :placeholder="t('ADMIN_IMPORT_LOG')" readonly v-model="logText" ref="logTextArea" />
   </div>
 </template>
 
 <script>
 import { call, readAsText, t } from '../../utils'
+import TkButton from './TkButton.vue'
 
 export default {
+  components: {
+    TkButton
+  },
   data () {
     return {
       loading: false,
@@ -117,7 +121,7 @@ export default {
 }
 .tk-admin-import select,
 .tk-admin-import input,
-.tk-admin-import .el-button,
+.tk-admin-import .tk-button,
 .tk-admin-import .el-textarea {
   margin-top: 1em;
 }

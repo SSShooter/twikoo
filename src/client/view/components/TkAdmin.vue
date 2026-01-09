@@ -13,7 +13,7 @@
             <input type="hidden" />
             <el-input class="tk-password" :placeholder="t('ADMIN_PASSWORD_PLACEHOLDER')" v-model="password" show-password @keyup.enter.native="onLogin" ref="focusme">
               <template slot="prepend">{{ t('ADMIN_PASSWORD') }}</template>
-              <el-button slot="append" @click="onLogin">{{ t('ADMIN_LOGIN') }}</el-button>
+              <tk-button slot="append" @click="onLogin">{{ t('ADMIN_LOGIN') }}</tk-button>
             </el-input>
           </form>
           <div class="tk-login-msg" v-if="loginErrorMessage">
@@ -34,7 +34,7 @@
               <template slot="prepend">{{ t('ADMIN_SET_PASSWORD_CONFIRM') }}</template>
             </el-input>
           </form>
-          <el-button class="tk-regist-button" :disabled="!canRegist" @click="onRegist">{{ t('ADMIN_REGIST') }}</el-button>
+          <tk-button class="tk-regist-button" :disabled="!canRegist" @click="onRegist">{{ t('ADMIN_REGIST') }}</tk-button>
           <div class="tk-login-msg" v-if="loginErrorMessage">{{ loginErrorMessage }}</div>
           <div class="tk-login-msg" v-if="!isSetCredentials">
             <a href="https://twikoo.js.org/faq.html" rel="noopener noreferrer" target="_blank">{{ t('ADMIN_CREDENTIALS_FAQ') }}</a>
@@ -67,6 +67,7 @@ import TkAdminComment from './TkAdminComment.vue'
 import TkAdminConfig from './TkAdminConfig.vue'
 import TkAdminImport from './TkAdminImport.vue'
 import TkAdminExport from './TkAdminExport.vue'
+import TkButton from './TkButton.vue'
 import { logger, call, t } from '../../utils'
 import iconClose from '@fortawesome/fontawesome-free/svgs/solid/times.svg?raw'
 
@@ -75,7 +76,8 @@ export default {
     TkAdminComment,
     TkAdminConfig,
     TkAdminImport,
-    TkAdminExport
+    TkAdminExport,
+    TkButton
   },
   props: {
     show: Boolean

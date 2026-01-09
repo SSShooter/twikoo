@@ -89,26 +89,6 @@ export default {
   background-color: rgba(144,147,153,0.13);
   border-color: rgba(144,147,153,0.31);
 }
-.twikoo .el-button:not(.el-button--primary):not(.el-button--text) {
-  color: currentColor;
-  background-color: rgba(144,147,153,0.063);
-  border-color: rgba(144,147,153,0.31);
-}
-.twikoo .el-button:not(.el-button--primary):not(.el-button--text):active,
-.twikoo .el-button:not(.el-button--primary):not(.el-button--text):focus,
-.twikoo .el-button:not(.el-button--primary):not(.el-button--text):hover {
-  color: rgb(var(--tk-primary-color-rgb));
-  background-color: rgba(var(--tk-primary-color-rgb), 0.063);
-  border-color: rgba(var(--tk-primary-color-rgb), 0.50);
-}
-.twikoo .el-button--primary.is-disabled,
-.twikoo .el-button--primary.is-disabled:active,
-.twikoo .el-button--primary.is-disabled:focus,
-.twikoo .el-button--primary.is-disabled:hover {
-  color: rgba(255,255,255,0.63);
-  background-color: rgba(var(--tk-primary-color-rgb), 0.50);
-  border-color: transparent;
-}
 .twikoo .el-loading-mask {
   background-color: transparent;
   backdrop-filter: opacity(20%);

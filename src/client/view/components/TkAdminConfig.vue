@@ -23,7 +23,7 @@
           <div class="tk-admin-config-email-test-desc">{{ t('ADMIN_CONFIG_EMAIL_TEST_HELP') }}</div>
           <div class="tk-admin-config-input">
             <el-input v-model="emailTestAddress" size="small">
-              <el-button slot="append" type="info" @click="testEmail">{{ t('ADMIN_CONFIG_EMAIL_TEST_BTN') }}</el-button>
+              <tk-button slot="append" type="info" @click="testEmail">{{ t('ADMIN_CONFIG_EMAIL_TEST_BTN') }}</tk-button>
             </el-input>
           </div>
           <div class="tk-admin-config-email-test-desc">{{ t('ADMIN_CONFIG_EMAIL_TEST_RESULT') }}{{ emailTestResult }}</div>
@@ -31,8 +31,8 @@
       </details>
     </div>
     <div class="tk-admin-config-actions">
-      <el-button size="small" type="primary" @click="saveConfig">{{ t('ADMIN_CONFIG_SAVE') }}</el-button>
-      <el-button size="small" type="info" @click="resetConfig">{{ t('ADMIN_CONFIG_RESET') }}</el-button>
+      <tk-button size="small" type="primary" @click="saveConfig">{{ t('ADMIN_CONFIG_SAVE') }}</tk-button>
+      <tk-button size="small" type="info" @click="resetConfig">{{ t('ADMIN_CONFIG_RESET') }}</tk-button>
     </div>
     <div class="tk-admin-config-message">{{ message }}</div>
   </div>
@@ -41,8 +41,12 @@
 <script>
 import { call, logger, t } from '../../utils'
 import { version } from '../../version'
+import TkButton from './TkButton.vue'
 
 export default {
+  components: {
+    TkButton
+  },
   data () {
     return {
       loading: true,

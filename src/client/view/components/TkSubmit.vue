@@ -29,18 +29,19 @@
           target="_blank"
           rel="noopener noreferrer"
           v-html="iconMarkdown"></a>
-      <el-button class="tk-cancel"
+      <tk-button class="tk-cancel"
           v-if="!!replyId"
           size="small"
-          @click="cancel">{{ t('SUBMIT_CANCEL') }}</el-button>
-      <el-button class="tk-preview"
+          @click="cancel">{{ t('SUBMIT_CANCEL') }}</tk-button>
+      <tk-button class="tk-preview"
           size="small"
-          @click="preview">{{ t('SUBMIT_PREVIEW') }}</el-button>
-      <el-button class="tk-send"
+          :disabled="!canSend"
+          @click="preview">{{ t('SUBMIT_PREVIEW') }}</tk-button>
+      <tk-button class="tk-send"
           type="primary"
           size="small"
           :disabled="!canSend"
-          @click="send">{{ isSending ? t('SUBMIT_SENDING') : t('SUBMIT_SEND') }}</el-button>
+          @click="send">{{ isSending ? t('SUBMIT_SENDING') : t('SUBMIT_SEND') }}</tk-button>
       <div class="tk-turnstile-container" ref="turnstile-container">
         <div class="tk-turnstile" ref="turnstile"></div>
       </div>
@@ -56,6 +57,7 @@ import iconImage from '@fortawesome/fontawesome-free/svgs/regular/image.svg?raw'
 import Clickoutside from 'element-ui/src/utils/clickoutside'
 import TkAvatar from './TkAvatar.vue'
 import TkMetaInput from './TkMetaInput.vue'
+import TkButton from './TkButton.vue'
 import { marked, call, logger, renderLinks, renderMath, renderCode, initOwoEmotions, initMarkedOwo, t, getUrl, getHref, blobToDataURL, getUserAgent } from '../../utils'
 import OwO from '../../lib/owo'
 
@@ -75,7 +77,8 @@ const imageTypes = [
 export default {
   components: {
     TkAvatar,
-    TkMetaInput
+    TkMetaInput,
+    TkButton
   },
   directives: {
     Clickoutside

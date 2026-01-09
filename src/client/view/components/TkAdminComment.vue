@@ -17,7 +17,7 @@
         <option value="VISIBLE">{{ t('ADMIN_COMMENT_FILTER_VISIBLE') }}</option>
         <option value="HIDDEN">{{ t('ADMIN_COMMENT_FILTER_HIDDEN') }}</option>
       </select>
-      <el-button size="small" type="primary" @click="getComments">{{ t('ADMIN_COMMENT_SEARCH') }}</el-button>
+      <tk-button size="small" type="primary" @click="getComments">{{ t('ADMIN_COMMENT_SEARCH') }}</tk-button>
     </div>
     <div class="tk-admin-comment-list" ref="comment-list">
       <div class="tk-admin-comment-item" v-for="comment in comments" :key="comment._id">
@@ -32,12 +32,12 @@
         </div>
         <div class="tk-content" v-html="comment.comment" ref="comments"></div>
         <div class="tk-admin-actions">
-          <el-button size="mini" type="text" @click="handleView(comment)">{{ t('ADMIN_COMMENT_VIEW') }}</el-button>
-          <el-button size="mini" type="text" v-if="comment.isSpam" @click="handleSpam(comment, false)">{{ t('ADMIN_COMMENT_SHOW') }}</el-button>
-          <el-button size="mini" type="text" v-if="!comment.isSpam" @click="handleSpam(comment, true)">{{ t('ADMIN_COMMENT_HIDE') }}</el-button>
-          <el-button size="mini" type="text" v-if="!comment.rid && comment.top" @click="handleTop(comment, false)">{{ t('ADMIN_COMMENT_UNTOP') }}</el-button>
-          <el-button size="mini" type="text" v-if="!comment.rid && !comment.top" @click="handleTop(comment, true)">{{ t('ADMIN_COMMENT_TOP') }}</el-button>
-          <el-button size="mini" type="text" @click="handleDelete(comment)">{{ t('ADMIN_COMMENT_DELETE') }}</el-button>
+          <tk-button size="mini" type="text" @click="handleView(comment)">{{ t('ADMIN_COMMENT_VIEW') }}</tk-button>
+          <tk-button size="mini" type="text" v-if="comment.isSpam" @click="handleSpam(comment, false)">{{ t('ADMIN_COMMENT_SHOW') }}</tk-button>
+          <tk-button size="mini" type="text" v-if="!comment.isSpam" @click="handleSpam(comment, true)">{{ t('ADMIN_COMMENT_HIDE') }}</tk-button>
+          <tk-button size="mini" type="text" v-if="!comment.rid && comment.top" @click="handleTop(comment, false)">{{ t('ADMIN_COMMENT_UNTOP') }}</tk-button>
+          <tk-button size="mini" type="text" v-if="!comment.rid && !comment.top" @click="handleTop(comment, true)">{{ t('ADMIN_COMMENT_TOP') }}</tk-button>
+          <tk-button size="mini" type="text" @click="handleDelete(comment)">{{ t('ADMIN_COMMENT_DELETE') }}</tk-button>
         </div>
       </div>
     </div>
@@ -55,13 +55,15 @@ import { timeago, call, convertLink, renderLinks, renderMath, renderCode, t } fr
 import { version } from '../../version'
 import TkAvatar from './TkAvatar.vue'
 import TkPagination from './TkPagination.vue'
+import TkButton from './TkButton.vue'
 
 const defaultPageSize = 5
 
 export default {
   components: {
     TkAvatar,
-    TkPagination
+    TkPagination,
+    TkButton
   },
   data () {
     return {

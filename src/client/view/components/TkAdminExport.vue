@@ -3,15 +3,19 @@
     <div class="tk-admin-warn tk-admin-import-warn">
       <p>{{ t('ADMIN_EXPORT_WARN') }}</p>
     </div>
-    <el-button size="small" @click="doExport('comment')" :disabled="loading">{{ t('ADMIN_EXPORT_COMMENT') }}</el-button>
-    <el-button size="small" @click="doExport('counter')" :disabled="loading">{{ t('ADMIN_EXPORT_COUNTER') }}</el-button>
+    <tk-button size="small" @click="doExport('comment')" :disabled="loading">{{ t('ADMIN_EXPORT_COMMENT') }}</tk-button>
+    <tk-button size="small" @click="doExport('counter')" :disabled="loading">{{ t('ADMIN_EXPORT_COUNTER') }}</tk-button>
   </div>
 </template>
 
 <script>
 import { call, t } from '../../utils'
+import TkButton from './TkButton.vue'
 
 export default {
+  components: {
+    TkButton
+  },
   data () {
     return {
       loading: false
