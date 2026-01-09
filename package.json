@@ -1,6 +1,6 @@
 {
   "name": "tttwikoo",
-  "version": "1.7.0",
+  "version": "1.7.1",
   "description": "A simple comment system.",
   "keywords": [
     "twikoojs",
@@ -11,7 +11,12 @@
   ],
   "author": "imaegoo <hello@imaegoo.com> (https://github.com/imaegoo)",
   "license": "MIT",
-  "main": "./dist/twikoo.all.min.js",
+  "main": "./dist/twikoo.min.js",
+  "exports": {
+    ".": "./dist/twikoo.min.js",
+    "./all": "./dist/twikoo.all.min.js",
+    "./style.css": "./dist/twikoo.css"
+  },
   "publishConfig": {
     "access": "public"
   },

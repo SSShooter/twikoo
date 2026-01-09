@@ -11,7 +11,14 @@ Last Update: ${new Date().toLocaleString()}`
 
 export default defineConfig({
   plugins: [
-    vue(),
+    vue({
+      template: {
+        compilerOptions: {
+          // 将默认的 'condense' 改为 'preserve'
+          whitespace: 'preserve'
+        }
+      }
+    }),
     banner(bannerText)
   ],
   build: {
