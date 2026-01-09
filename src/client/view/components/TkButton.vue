@@ -96,46 +96,30 @@ export default {
   color: currentColor;
   background: rgba(144, 147, 153, 0.08);
   border-color: rgba(144, 147, 153, 0.25);
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
 }
 
 .tk-button--default:hover:not(.is-disabled) {
   color: rgb(var(--tk-primary-color-rgb));
   background: rgba(var(--tk-primary-color-rgb), 0.08);
   border-color: rgba(var(--tk-primary-color-rgb), 0.4);
-  box-shadow: 0 2px 6px rgba(var(--tk-primary-color-rgb), 0.15);
 }
 
 .tk-button--default:active:not(.is-disabled) {
-  box-shadow: 0 1px 3px rgba(var(--tk-primary-color-rgb), 0.1);
+  background: rgba(var(--tk-primary-color-rgb), 0.12);
 }
 
 .tk-button--primary {
   color: #ffffff;
-  background: linear-gradient(135deg,
-    rgb(var(--tk-primary-color-rgb)) 0%,
-    rgba(var(--tk-primary-color-rgb), 0.85) 100%
-  );
+  background: rgb(var(--tk-primary-color-rgb));
   border-color: transparent;
-  box-shadow:
-    0 2px 6px rgba(var(--tk-primary-color-rgb), 0.25),
-    0 1px 3px rgba(var(--tk-primary-color-rgb), 0.15);
 }
 
 .tk-button--primary:hover:not(.is-disabled) {
-  background: linear-gradient(135deg,
-    rgba(var(--tk-primary-color-rgb), 0.95) 0%,
-    rgba(var(--tk-primary-color-rgb), 0.8) 100%
-  );
-  box-shadow:
-    0 4px 12px rgba(var(--tk-primary-color-rgb), 0.3),
-    0 2px 6px rgba(var(--tk-primary-color-rgb), 0.2);
+  background: rgba(var(--tk-primary-color-rgb), 0.9);
 }
 
 .tk-button--primary:active:not(.is-disabled) {
-  box-shadow:
-    0 2px 6px rgba(var(--tk-primary-color-rgb), 0.2),
-    0 1px 3px rgba(var(--tk-primary-color-rgb), 0.15);
+  background: rgba(var(--tk-primary-color-rgb), 0.8);
 }
 
 .tk-button--text {
@@ -159,17 +143,15 @@ export default {
   color: currentColor;
   background: rgba(144, 147, 153, 0.15);
   border-color: rgba(144, 147, 153, 0.3);
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
 }
 
 .tk-button--info:hover:not(.is-disabled) {
   background: rgba(144, 147, 153, 0.25);
   border-color: rgba(144, 147, 153, 0.4);
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
 }
 
 .tk-button--info:active:not(.is-disabled) {
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08);
+  background: rgba(144, 147, 153, 0.3);
 }
 
 /* Disabled state */

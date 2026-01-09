@@ -48,13 +48,18 @@ export default {
   cursor: pointer;
   padding: 0.75em;
   text-align: center;
-  transition: all 0.5s;
+  font-size: 0.875em;
+  color: rgba(var(--tk-primary-color-rgb, 64, 158, 255), 0.8);
+  background: transparent;
+  border-radius: 4px;
+  transition: all 0.25s ease;
 }
 .tk-expand:hover {
-  background-color: rgba(0,0,0,0.13);
+  color: rgb(var(--tk-primary-color-rgb, 64, 158, 255));
+  background: rgba(var(--tk-primary-color-rgb, 64, 158, 255), 0.04);
 }
 .tk-expand:active {
-  background-color: rgba(0,0,0,0.19);
+  background: rgba(var(--tk-primary-color-rgb, 64, 158, 255), 0.08);
 }
 .tk-content img {
   max-width: 300px;
@@ -103,5 +108,9 @@ export default {
   border-left: 0.5rem solid #e7c000;
   color: #6b5900;
   align-self: stretch;
+}
+/* loading svg color */
+.twikoo .el-loading-spinner .path {
+  stroke: rgb(var(--tk-primary-color-rgb));
 }
 </style>

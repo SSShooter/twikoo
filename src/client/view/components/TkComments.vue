@@ -4,10 +4,9 @@
     <div class="tk-comments-container" v-loading="loading">
       <div class="tk-comments-title">
         <span class="tk-comments-count" :class="{ __hidden: !comments.length }">
-          <span>{{ count }}</span>
-          <span>{{ t('COMMENTS_COUNT_SUFFIX') }}</span>
+          <span>{{ count + ' ' + t('COMMENTS_COUNT_SUFFIX') }}</span>
         </span>
-        <span>
+        <span class="tk-comments-actions">
           <span class="tk-icon __comments" v-if="!loading && !loadingMore" v-html="iconRefresh" @click="refresh"
             ></span><span class="tk-icon __comments" v-if="showAdminEntry" v-html="iconSetting" @click="openAdmin"
             ></span>
@@ -123,15 +122,17 @@ export default {
 
 <style>
 .tk-comments-title {
-  font-size: 1.25rem;
   font-weight: bold;
   margin-bottom: 1rem;
   display: flex;
-  align-items: baseline;
+  align-items: flex-end;
   justify-content: space-between;
 }
 .tk-comments-count.__hidden {
   visibility: hidden;
+}
+.tk-comments-actions{
+  font-size: 1.25rem;
 }
 .tk-comments-container {
   min-height: 10rem;

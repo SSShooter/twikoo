@@ -13,7 +13,7 @@
             <input type="hidden" />
             <el-input class="tk-password" :placeholder="t('ADMIN_PASSWORD_PLACEHOLDER')" v-model="password" show-password @keyup.enter.native="onLogin" ref="focusme">
               <template slot="prepend">{{ t('ADMIN_PASSWORD') }}</template>
-              <tk-button slot="append" @click="onLogin">{{ t('ADMIN_LOGIN') }}</tk-button>
+              <div style="cursor: pointer;" slot="append" @click="onLogin">{{ t('ADMIN_LOGIN') }}</div>
             </el-input>
           </form>
           <div class="tk-login-msg" v-if="loginErrorMessage">
@@ -290,7 +290,7 @@ export default {
   color: #ffffff;
   font-size: 1.25rem;
   text-align: center;
-  margin-top: 10rem;
+  margin-top: 5rem;
 }
 .tk-password,
 .tk-login-msg {
