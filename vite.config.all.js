@@ -40,6 +40,7 @@ export default defineConfig({
     },
     target: 'es2015',
     cssCodeSplit: false,
+    emptyOutDir: false,
     outDir: 'dist'
   },
   resolve: {

@@ -28,7 +28,6 @@ async function getRecentComments (options = {}) {
   return await getRecentCommentsApi(tcb, options)
 }
 
-export default init
 export {
   version,
   init,
